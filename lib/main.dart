@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/Screens/Home_page.dart';
+import 'package:plant_app/Screens/details_update_page.dart';
 import 'package:plant_app/Screens/map_page.dart';
+import 'package:plant_app/Screens/onboarding/main_onboarding_page.dart';
 import 'package:plant_app/Screens/profile_page.dart';
+import 'package:plant_app/services/login_page.dart';
+import 'package:plant_app/services/signup_page.dart';
 import 'widgets/bottom_nav_bar.dart';
 
 void main() {
@@ -14,7 +18,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Plant Management',
-      home: MainScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => OnboardingScreen(),
+        '/signup': (context) => SignUpScreen(),
+        '/login': (context) => LoginPage(),
+        '/home': (context) => HomePage(),
+        '/profile': (context) => ProfilePage(),
+        '/details': (context) => DetailsUpdatePage(),
+        '/main': (context) => MainScreen(),
+      },
     );
   }
 }

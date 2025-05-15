@@ -5,7 +5,7 @@ class ProfileCard extends StatelessWidget implements PreferredSizeWidget {
   final Size preferredSize;
 
   ProfileCard({Key? key})
-      : preferredSize = const Size.fromHeight(180.0),
+      : preferredSize = const Size.fromHeight(200.0),
         super(key: key);
 
   @override
